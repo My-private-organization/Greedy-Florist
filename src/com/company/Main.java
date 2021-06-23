@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -12,13 +10,13 @@ public class Main {
         int N = scanner.nextInt();
         int K = scanner.nextInt();
 
-        Integer[] priceOfPlants = new Integer[N];
+        int[] priceOfPlants = new int[N];
 
         for (int i = 0; i < N; i++) {
             priceOfPlants[i] = scanner.nextInt();
         }
 
-        Arrays.sort(priceOfPlants, Collections.reverseOrder());
+        QuickSortDesc.quickSortDesc(priceOfPlants, 0, N - 1);
 
         int tripNumber = 0;
         int counter = 0;
